@@ -2,27 +2,49 @@ To open ipynb file go to colab.research.google.com and run cells
 Examples of interpret work located in ipynb file or
 
 "Lambda Calculus Interpreter
+
 Enter lambda expressions using '\' or 'λ' for abstraction.
+
 For example: (\x. x) y
+
 Type 'quit' to exit.
+
 λ> λx.x
+
 Parsed term: (λx.x)
+
 Reduced term: (λx.x)
+
 λ> (λx.x) y
+
 Parsed term: ((λx.x) y)
+
 Reduced term: y
+
 λ> (λx. x x) (λy. y)
+
 Parsed term: ((λx.(x x)) (λy.y))
+
 Reduced term: (λy.y)
+
 λ> (λx. x) ((λy. y) z)
+
 Parsed term: ((λx.x) ((λy.y) z))
+
 Reduced term: z
+
 λ> (λn. λf. λx. f (n f x)) λf. λx. f x
+
 Parsed term: ((λn.(λf.(λx.(f ((n f) x))))) (λf.(λx.(f x))))
+
 Reduced term: (λf.(λx.(f (f x))))
+
 λ> (λp. λq. p q p) (λx. λy. x) (λx. λy. y)
+
 Parsed term: (((λp.(λq.((p q) p))) (λx.(λy.x))) (λx.(λy.y)))
+
 Reduced term: (λx.(λy.y))
+
 λ> quit"
 
 # Lambda Calculus Interpreter: Data Structures and Algorithms
